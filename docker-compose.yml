@@ -6,5 +6,7 @@ services:
     restart: always
     env_file:
       - .env
+    volumes:
+      - ${DATA_PATH:?DATA_PATH variable missing}:/data
     environment:
       INTERVAL: 300 # default
